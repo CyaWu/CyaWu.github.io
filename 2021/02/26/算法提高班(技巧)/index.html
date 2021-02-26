@@ -4,16 +4,19 @@
   <meta charset="utf-8">
   
   
-  <title>Hexo</title>
+  <title>算法提高课 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo">
+  <meta name="description" content="主要是一些技巧 (和应用方式，都稍微高级复杂一点)   题目类别 答题区链接    数字三角形模型 AcWing 1015. 摘花生    AcWing 1018. 最低通行费    AcWing 1027. 方格取数    AcWing 275. 传纸条   1015理解这个DP的方法就是12i是行j是列 $所以 f[i - 1][j] 是上到下遍历$$ f[i][j - 1] 是左到右遍历$">
+<meta property="og:type" content="article">
+<meta property="og:title" content="算法提高课">
 <meta property="og:url" content="http://example.com/2021/02/26/%E7%AE%97%E6%B3%95%E6%8F%90%E9%AB%98%E7%8F%AD(%E6%8A%80%E5%B7%A7)/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="主要是一些技巧 (和应用方式，都稍微高级复杂一点)   题目类别 答题区链接    数字三角形模型 AcWing 1015. 摘花生    AcWing 1018. 最低通行费    AcWing 1027. 方格取数    AcWing 275. 传纸条   1015理解这个DP的方法就是12i是行j是列 $所以 f[i - 1][j] 是上到下遍历$$ f[i][j - 1] 是左到右遍历$">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-02-26T15:54:25.092Z">
-<meta property="article:modified_time" content="2021-02-26T15:54:25.092Z">
+<meta property="article:published_time" content="2021-02-26T15:57:00.000Z">
+<meta property="article:modified_time" content="2021-02-26T16:04:40.790Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="算法">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -74,23 +77,70 @@
         <section id="main"><article id="post-算法提高班(技巧)" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2021/02/26/%E7%AE%97%E6%B3%95%E6%8F%90%E9%AB%98%E7%8F%AD(%E6%8A%80%E5%B7%A7)/" class="article-date">
-  <time class="dt-published" datetime="2021-02-26T15:54:25.092Z" itemprop="datePublished">2021-02-26</time>
+  <time class="dt-published" datetime="2021-02-26T15:57:00.000Z" itemprop="datePublished">2021-02-26</time>
 </a>
     
   </div>
   <div class="article-inner">
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      算法提高课
+    </h1>
+  
+
+      </header>
+    
     <div class="e-content article-entry" itemprop="articleBody">
       
-        
+        <h1 id="主要是一些技巧-和应用方式，都稍微高级复杂一点"><a href="#主要是一些技巧-和应用方式，都稍微高级复杂一点" class="headerlink" title="主要是一些技巧 (和应用方式，都稍微高级复杂一点)"></a>主要是一些技巧 (和应用方式，都稍微高级复杂一点)</h1><table>
+<thead>
+<tr>
+<th>题目类别</th>
+<th>答题区链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>数字三角形模型</td>
+<td>AcWing 1015. 摘花生</td>
+</tr>
+<tr>
+<td></td>
+<td>AcWing 1018. 最低通行费</td>
+</tr>
+<tr>
+<td></td>
+<td>AcWing 1027. 方格取数</td>
+</tr>
+<tr>
+<td></td>
+<td>AcWing 275. 传纸条</td>
+</tr>
+</tbody></table>
+<h3 id="1015"><a href="#1015" class="headerlink" title="1015"></a>1015</h3><h3 id="理解这个DP的方法就是"><a href="#理解这个DP的方法就是" class="headerlink" title="理解这个DP的方法就是"></a>理解这个DP的方法就是</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">i是行</span><br><span class="line">j是列</span><br></pre></td></tr></table></figure>
+<p>$所以 f[i - 1][j] 是上到下遍历$<br>$ f[i][j - 1] 是左到右遍历$</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">105</span>;</span><br><span class="line"><span class="keyword">int</span> a[N][N], f[N][N]; <span class="comment">//数据每个点花生数量，状态转移方程</span></span><br><span class="line"><span class="keyword">int</span> t, row, col;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; t;</span><br><span class="line">    <span class="keyword">while</span>(t --)&#123;</span><br><span class="line">        <span class="built_in">cin</span> &gt;&gt; row &gt;&gt; col; </span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= row; i++)</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= col; j++)</span><br><span class="line">                <span class="built_in">cin</span> &gt;&gt; a[i][j];</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//定义f[i][j] 状态转移方程：到i,j 所能摘的花生max最大值</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= row; i++)</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= col; j++)</span><br><span class="line">            f[i][j] = max(f[i][j - <span class="number">1</span>], f[i - <span class="number">1</span>][j]) + a[i][j];</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; f[row][col] &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> typing <span class="keyword">import</span> List</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">penats</span>(<span class="params">self, group: List[List[<span class="built_in">int</span>]]</span>):</span></span><br><span class="line">        dp = [[<span class="number">0</span> <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(group[<span class="number">0</span>])+<span class="number">1</span>)] <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(group)+<span class="number">1</span>)]</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="built_in">len</span>(dp)):</span><br><span class="line">            <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="built_in">len</span>(dp[<span class="number">0</span>])):</span><br><span class="line">                dp[i][j] = <span class="built_in">max</span>(dp[i-<span class="number">1</span>][j], dp[i][j-<span class="number">1</span>]) + group[i-<span class="number">1</span>][j-<span class="number">1</span>]</span><br><span class="line">        <span class="keyword">return</span> dp[-<span class="number">1</span>][-<span class="number">1</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    solution = Solution()</span><br><span class="line">    res = []</span><br><span class="line">    groups_num = <span class="built_in">int</span>(<span class="built_in">input</span>())</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(groups_num):</span><br><span class="line">        row_num, col_num = <span class="built_in">list</span>(<span class="built_in">map</span>(<span class="built_in">int</span>, <span class="built_in">input</span>().split()))</span><br><span class="line">        cur_group = []</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(row_num):</span><br><span class="line">            cur_group.append(<span class="built_in">list</span>(<span class="built_in">map</span>(<span class="built_in">int</span>, <span class="built_in">input</span>().split())))</span><br><span class="line">        tmp_res = solution.penats(cur_group)</span><br><span class="line">        res.append(tmp_res)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> item <span class="keyword">in</span> res:</span><br><span class="line">        print(item)</span><br></pre></td></tr></table></figure>
+
+
+
+<hr>
+<p>其他 TBC</p>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/02/26/%E7%AE%97%E6%B3%95%E6%8F%90%E9%AB%98%E7%8F%AD(%E6%8A%80%E5%B7%A7)/" data-id="cklmha7t10002p4tj5w46ftp4" data-title="" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/02/26/%E7%AE%97%E6%B3%95%E6%8F%90%E9%AB%98%E7%8F%AD(%E6%8A%80%E5%B7%A7)/" data-id="cklmhnldn000akwtj5axk4kej" data-title="算法提高课" class="article-share-link">Share</a>
       
       
       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a></li></ul>
+
     </footer>
   </div>
   
@@ -101,13 +151,13 @@
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          (no title)
+          KickStart2019-
         
       </div>
     </a>
   
   
-    <a href="/2021/02/26/Python-yield/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2021/02/26/Google_KickStart%202020lee215%E7%89%88/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
       <div class="article-nav-title"></div>
     </a>
@@ -126,9 +176,23 @@
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Google/" rel="tag">Google</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/StackOverFlow-Python/" rel="tag">StackOverFlow; Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a></li></ul>
+    </div>
+  </div>
+
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Google/" style="font-size: 10px;">Google</a> <a href="/tags/StackOverFlow-Python/" style="font-size: 10px;">StackOverFlow; Python</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 10px;">算法</a>
+    </div>
+  </div>
+
   
     
   <div class="widget-wrap">
@@ -147,7 +211,11 @@
       <ul>
         
           <li>
-            <a href="/2021/02/26/%5B%E6%96%B0%E9%97%BB%5DAI%E7%9A%84%E6%9C%AA%E6%9D%A5%E5%8F%91%E5%B1%95%E4%B9%8B%E8%B7%AF-%E4%BD%9C%E8%80%85%EF%BC%9A%E8%B5%B5%E4%BF%8A%E5%8D%9A%20Jake/">(no title)</a>
+            <a href="/2021/02/26/Google_KickStart%202019%E5%92%8C%E4%BB%A5%E5%89%8D/">KickStart2019-</a>
+          </li>
+        
+          <li>
+            <a href="/2021/02/26/%E7%AE%97%E6%B3%95%E6%8F%90%E9%AB%98%E7%8F%AD(%E6%8A%80%E5%B7%A7)/">算法提高课</a>
           </li>
         
           <li>
@@ -155,15 +223,11 @@
           </li>
         
           <li>
-            <a href="/2021/02/26/Google_KickStart%202019%E5%92%8C%E4%BB%A5%E5%89%8D/">(no title)</a>
+            <a href="/2021/02/26/Python-yield/">how the yield keyword in Python works.</a>
           </li>
         
           <li>
-            <a href="/2021/02/26/%E7%AE%97%E6%B3%95%E6%8F%90%E9%AB%98%E7%8F%AD(%E6%8A%80%E5%B7%A7)/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2021/02/26/Python-yield/">(no title)</a>
+            <a href="/2021/02/26/LeetCode%E5%91%A8%E8%B5%9B219-223/">LeetCode</a>
           </li>
         
       </ul>

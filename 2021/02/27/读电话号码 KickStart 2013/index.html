@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="读电话号码 KickStart 2013 Round A 题A, 小窝窝 (伸懒腰)">
-    <meta name="description" content="">
+    <meta name="description" content="描述是...">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -14,6 +14,17 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <!-- Global site tag (gtag.js) - Google Analytics -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', '');
+</script>
 
 
     <title>读电话号码 KickStart 2013 Round A 题A | 小窝窝 (伸懒腰)</title>
@@ -119,17 +130,6 @@
     
   </li>
   
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/friends" class="waves-effect waves-light">
-      
-      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
-      
-      <span>友情链接</span>
-    </a>
-    
-  </li>
-  
   <li>
     <a href="#searchModal" class="modal-trigger waves-effect waves-light">
       <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
@@ -147,7 +147,7 @@
         <div class="logo-name">小窝窝 (伸懒腰)</div>
         <div class="logo-desc">
             
-            Never really desperate, only the lost of the soul.
+            描述是...
             
         </div>
     </div>
@@ -222,21 +222,10 @@
           
         </li>
         
-        <li class="m-nav-item">
-	  
-		<a href="/friends" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-address-book"></i>
-			
-			友情链接
-		</a>
-          
-        </li>
-        
         
         <li><div class="divider"></div></li>
         <li>
-            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+            <a href="https://github.com/cyawu" class="waves-effect waves-light" target="_blank">
                 <i class="fab fa-github-square fa-fw"></i>Fork Me
             </a>
         </li>
@@ -293,7 +282,7 @@
     }
 </style>
 
-<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+<a href="https://github.com/cyawu" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
    data-tooltip="Fork Me" data-position="left" data-delay="50">
     <svg viewBox="0 0 250 250" aria-hidden="true">
         <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
@@ -474,18 +463,112 @@
         <hr class="clearfix">
 
         
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
 
         
 
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <p>698 读电话号码 KickStart 2013 Round A 题A</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt; //从io标准输入输出里读</span><br><span class="line">#include&lt;cstring&gt;</span><br><span class="line">#include&lt;sstream&gt; //从字符串读</span><br><span class="line">#include&lt;vector&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">// getline() strstr 分隔符，- 读到它时终止。</span><br><span class="line">string num[] = {</span><br><span class="line">    "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"</span><br><span class="line">};</span><br><span class="line">string cnts[] = { //缩写的表示</span><br><span class="line">    "", "", "double", "triple", "quadruple", "quintuple", "sextuple", "septuple", "octuple",</span><br><span class="line">    "nonuple", "decuple"</span><br><span class="line">};</span><br><span class="line">//有点像PAT. 思路简单，但代码实现复杂，细节多，特判，输入输出不一样。</span><br><span class="line">void print(string s)</span><br><span class="line">{</span><br><span class="line">    for (int i = 0; i &lt; s.size(); i++) //遍历s 每一段。</span><br><span class="line">    {</span><br><span class="line">        int j = i + 1; //当前相同的数字是哪一段, 区间:【i, j】</span><br><span class="line">        while (j &lt; s.size() &amp;&amp; s[j] == s[i]) j++; //区间【i,j】相同</span><br><span class="line">        int len = j - i; // 这一段的长度</span><br><span class="line">        if (len &gt;= 2 &amp;&amp; len &lt;= 10) cout &lt;&lt; cnts[len] &lt;&lt; ' ' &lt;&lt; num[s[i] - '0'] &lt;&lt; ' ';</span><br><span class="line">        //缩写 + num[s[i]]</span><br><span class="line">        else if (len &gt; 10)</span><br><span class="line">        {</span><br><span class="line">            for (int k = 0; k &lt; len; k++) //大于10个，分别输出len个数字</span><br><span class="line">                cout &lt;&lt; num[s[i] - '0'] &lt;&lt; ' ';</span><br><span class="line">            //注意 s[i]是个字符，所以减去偏移量'0'</span><br><span class="line">        }</span><br><span class="line">        else cout &lt;&lt; num[s[i] - '0'] &lt;&lt; ' ';//一个字符</span><br><span class="line">        </span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">{</span><br><span class="line">    int n;</span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line">    for (int C = 1; C &lt;= n; C++)</span><br><span class="line">    {</span><br><span class="line">        string s, seq; //电话号码，分隔</span><br><span class="line">        cin &gt;&gt; s &gt;&gt; seq;</span><br><span class="line">        </span><br><span class="line">        vector&lt;int&gt; len; //读到长度(Defn)数组里</span><br><span class="line">        string nums;</span><br><span class="line">        stringstream ssin(seq); //初始化到sstream</span><br><span class="line">        while (getline(ssin, nums, '-')) len.push_back(stoi(nums)); //压入vector(len)中，并且stoi string to integer 字符串转化为数字</span><br><span class="line">        //读到nums里，用 ‘-’终止</span><br><span class="line">        </span><br><span class="line">        printf("Case #%d  ", C);</span><br><span class="line">        int start = 0; //每一段的开始。第一段从0开始</span><br><span class="line">        for (int l : len) //每次找到当前段的长度</span><br><span class="line">        {</span><br><span class="line">            print(s.substr(start, l)); //s当中的某一段，从start开始，到l。</span><br><span class="line">            start += l; //输出完事后 start偏移l</span><br><span class="line">        }</span><br><span class="line">        puts("");</span><br><span class="line">    }</span><br><span class="line">    return 0;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">#include&lt;iostream&gt; //从io标准输入输出里读
+#include&lt;cstring&gt;
+#include&lt;sstream&gt; //从字符串读
+#include&lt;vector&gt;
+using namespace std;
+// getline() strstr 分隔符，- 读到它时终止。
+string num[] = {
+    "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"
+};
+string cnts[] = { //缩写的表示
+    "", "", "double", "triple", "quadruple", "quintuple", "sextuple", "septuple", "octuple",
+    "nonuple", "decuple"
+};
+//有点像PAT. 思路简单，但代码实现复杂，细节多，特判，输入输出不一样。
+void print(string s)
+{
+    for (int i = 0; i &lt; s.size(); i++) //遍历s 每一段。
+    {
+        int j = i + 1; //当前相同的数字是哪一段, 区间:【i, j】
+        while (j &lt; s.size() &amp;&amp; s[j] == s[i]) j++; //区间【i,j】相同
+        int len = j - i; // 这一段的长度
+        if (len &gt;= 2 &amp;&amp; len &lt;= 10) cout &lt;&lt; cnts[len] &lt;&lt; ' ' &lt;&lt; num[s[i] - '0'] &lt;&lt; ' ';
+        //缩写 + num[s[i]]
+        else if (len &gt; 10)
+        {
+            for (int k = 0; k &lt; len; k++) //大于10个，分别输出len个数字
+                cout &lt;&lt; num[s[i] - '0'] &lt;&lt; ' ';
+            //注意 s[i]是个字符，所以减去偏移量'0'
+        }
+        else cout &lt;&lt; num[s[i] - '0'] &lt;&lt; ' ';//一个字符
+        
+    }
+}
+
+int main()
+{
+    int n;
+    cin &gt;&gt; n;
+    for (int C = 1; C &lt;= n; C++)
+    {
+        string s, seq; //电话号码，分隔
+        cin &gt;&gt; s &gt;&gt; seq;
+        
+        vector&lt;int&gt; len; //读到长度(Defn)数组里
+        string nums;
+        stringstream ssin(seq); //初始化到sstream
+        while (getline(ssin, nums, '-')) len.push_back(stoi(nums)); //压入vector(len)中，并且stoi string to integer 字符串转化为数字
+        //读到nums里，用 ‘-’终止
+        
+        printf("Case #%d  ", C);
+        int start = 0; //每一段的开始。第一段从0开始
+        for (int l : len) //每次找到当前段的长度
+        {
+            print(s.substr(start, l)); //s当中的某一段，从start开始，到l。
+            start += l; //输出完事后 start偏移l
+        }
+        puts("");
+    }
+    return 0;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 
 <p>同逻辑Python版：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">缩写 = ['', '', 'double', 'triple', 'quadruple', 'quintuple', </span><br><span class="line">    'sextuple', 'septuple', 'octuple',</span><br><span class="line">    'nonuple', 'decuple']</span><br><span class="line">数字 = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven',</span><br><span class="line">        'eight', 'nine']</span><br><span class="line">def read(l, r):</span><br><span class="line">    while l &lt; r:</span><br><span class="line">        k = l + 1</span><br><span class="line">        while k &lt; r and a[k] == a[l]:</span><br><span class="line">            k += 1</span><br><span class="line">        #这样区间[l, k]就是数字相同的一段</span><br><span class="line">        长度 = k - l</span><br><span class="line">        if 2 &lt;= 长度 &lt;= 10:</span><br><span class="line">            res.extend([缩写[长度], 数字[a[l]]])</span><br><span class="line">        elif 长度 &gt; 10:</span><br><span class="line">            res.extend([数字[a[l]]] * 长度) #每个字分别输出出来</span><br><span class="line">        else:</span><br><span class="line">            res.append(数字[a[l]]) #省一个就输出出来</span><br><span class="line">        l = k</span><br><span class="line"></span><br><span class="line">if __name__ == "__main__":</span><br><span class="line">    T = int(input())</span><br><span class="line">    t = 0</span><br><span class="line">    while t &lt; T:</span><br><span class="line">        t += 1</span><br><span class="line">        a, b = input().split()</span><br><span class="line">        a = list(map(int, a))</span><br><span class="line">        b = list(map(int, b.split('-'))) #用-来分隔</span><br><span class="line">        l, res = 0, []</span><br><span class="line">        for x in b:</span><br><span class="line">            read(l, l + x)</span><br><span class="line">            l += x #起始端加上偏移量</span><br><span class="line">        print('Case #%d:  %s' % (t, ' '.join(res)))</span><br></pre></td></tr></tbody></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">缩写 = ['', '', 'double', 'triple', 'quadruple', 'quintuple', 
+    'sextuple', 'septuple', 'octuple',
+    'nonuple', 'decuple']
+数字 = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven',
+        'eight', 'nine']
+def read(l, r):
+    while l &lt; r:
+        k = l + 1
+        while k &lt; r and a[k] == a[l]:
+            k += 1
+        #这样区间[l, k]就是数字相同的一段
+        长度 = k - l
+        if 2 &lt;= 长度 &lt;= 10:
+            res.extend([缩写[长度], 数字[a[l]]])
+        elif 长度 &gt; 10:
+            res.extend([数字[a[l]]] * 长度) #每个字分别输出出来
+        else:
+            res.append(数字[a[l]]) #省一个就输出出来
+        l = k
+
+if __name__ == "__main__":
+    T = int(input())
+    t = 0
+    while t &lt; T:
+        t += 1
+        a, b = input().split()
+        a = list(map(int, a))
+        b = list(map(int, b.split('-'))) #用-来分隔
+        l, res = 0, []
+        for x in b:
+            read(l, l + x)
+            l += x #起始端加上偏移量
+        print('Case #%d:  %s' % (t, ' '.join(res)))<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
                 
@@ -513,7 +596,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://CyaWu.github.io/2021/02/27/%E8%AF%BB%E7%94%B5%E8%AF%9D%E5%8F%B7%E7%A0%81%20KickStart%202013/">http://CyaWu.github.io/2021/02/27/%E8%AF%BB%E7%94%B5%E8%AF%9D%E5%8F%B7%E7%A0%81%20KickStart%202013/</a>
+                    <a href="http://cyawu.github.io/2021/02/27/%E8%AF%BB%E7%94%B5%E8%AF%9D%E5%8F%B7%E7%A0%81%20KickStart%202013/">http://cyawu.github.io/2021/02/27/%E8%AF%BB%E7%94%B5%E8%AF%9D%E5%8F%B7%E7%A0%81%20KickStart%202013/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -574,134 +657,10 @@
                 </div>
             </div>
             
-                <style>
-    #reward {
-        margin: 40px 0;
-        text-align: center;
-    }
-
-    #reward .reward-link {
-        font-size: 1.4rem;
-        line-height: 38px;
-    }
-
-    #reward .btn-floating:hover {
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
-    }
-
-    #rewardModal {
-        width: 320px;
-        height: 350px;
-    }
-
-    #rewardModal .reward-title {
-        margin: 15px auto;
-        padding-bottom: 5px;
-    }
-
-    #rewardModal .modal-content {
-        padding: 10px;
-    }
-
-    #rewardModal .close {
-        position: absolute;
-        right: 15px;
-        top: 15px;
-        color: rgba(0, 0, 0, 0.5);
-        font-size: 1.3rem;
-        line-height: 20px;
-        cursor: pointer;
-    }
-
-    #rewardModal .close:hover {
-        color: #ef5350;
-        transform: scale(1.3);
-        -moz-transform:scale(1.3);
-        -webkit-transform:scale(1.3);
-        -o-transform:scale(1.3);
-    }
-
-    #rewardModal .reward-tabs {
-        margin: 0 auto;
-        width: 210px;
-    }
-
-    .reward-tabs .tabs {
-        height: 38px;
-        margin: 10px auto;
-        padding-left: 0;
-    }
-
-    .reward-content ul {
-        padding-left: 0 !important;
-    }
-
-    .reward-tabs .tabs .tab {
-        height: 38px;
-        line-height: 38px;
-    }
-
-    .reward-tabs .tab a {
-        color: #fff;
-        background-color: #ccc;
-    }
-
-    .reward-tabs .tab a:hover {
-        background-color: #ccc;
-        color: #fff;
-    }
-
-    .reward-tabs .wechat-tab .active {
-        color: #fff !important;
-        background-color: #22AB38 !important;
-    }
-
-    .reward-tabs .alipay-tab .active {
-        color: #fff !important;
-        background-color: #019FE8 !important;
-    }
-
-    .reward-tabs .reward-img {
-        width: 210px;
-        height: 210px;
-    }
-</style>
-
-<div id="reward">
-    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
-
-    <!-- Modal Structure -->
-    <div id="rewardModal" class="modal">
-        <div class="modal-content">
-            <a class="close modal-close"><i class="fas fa-times"></i></a>
-            <h4 class="reward-title">你的赏识是我前进的动力</h4>
-            <div class="reward-content">
-                <div class="reward-tabs">
-                    <ul class="tabs row">
-                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
-                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
-                    </ul>
-                    <div id="alipay">
-                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
-                    </div>
-                    <div id="wechat">
-                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
-</div>
 
-<script>
-    $(function () {
-        $('.tabs').tabs();
-    });
-</script>
-
-            
-        </div>
-    </div>
+    
 
     
 
@@ -942,67 +901,13 @@
 
     <footer class="page-footer bg-color">
     
-        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
-<style>
-    .aplayer .aplayer-lrc p {
-        
-        display: none;
-        
-        font-size: 12px;
-        font-weight: 700;
-        line-height: 16px !important;
-    }
-
-    .aplayer .aplayer-lrc p.aplayer-lrc-current {
-        
-        display: none;
-        
-        font-size: 15px;
-        color: #42b983;
-    }
-
-    
-    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
-        left: -66px !important;
-    }
-
-    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
-        left: 0px !important;
-    }
-
-    
-</style>
-<div class="">
-    
-    <div class="row">
-        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
-                   server="netease"
-                   type="playlist"
-                   id="503838841"
-                   fixed='true'
-                   autoplay='false'
-                   theme='#42b983'
-                   loop='all'
-                   order='random'
-                   preload='auto'
-                   volume='0.7'
-                   list-folded='true'
-        >
-        </meting-js>
-    </div>
-</div>
-
-<script src="/libs/aplayer/APlayer.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
-
-    
     <div class="container row center-align" style="margin-bottom: 0px !important;">
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
-                <span id="year">2021</span>
+                <span id="year">2019-2021</span>
             
-            <span id="year">2021</span>
+            <span id="year">2019</span>
             <a href="/about" target="_blank">Cya Wu</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
@@ -1030,13 +935,13 @@
             
         </div>
         <div class="col s12 m4 l4 social-link social-statis">
-    <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+    <a href="https://github.com/CyaWu" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
         <i class="fab fa-github"></i>
     </a>
 
 
 
-    <a href="mailto:1181062873@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+    <a href="mailto:这个先不公开@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
         <i class="fas fa-envelope-open"></i>
     </a>
 
@@ -1046,7 +951,7 @@
 
 
 
-    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1181062873" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1181062873" data-position="top" data-delay="50">
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=不公开" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 不公开" data-position="top" data-delay="50">
         <i class="fab fa-qq"></i>
     </a>
 
@@ -1215,7 +1120,8 @@ $(function () {
 
     
 
-	
+    <!--腾讯兔小巢-->
+    
     
 
     

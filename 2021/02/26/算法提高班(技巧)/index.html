@@ -488,7 +488,7 @@
 </tr>
 </tbody></table>
 <h3 id="1015"><a href="#1015" class="headerlink" title="1015"></a>1015</h3><h3 id="理解这个DP的方法就是"><a href="#理解这个DP的方法就是" class="headerlink" title="理解这个DP的方法就是"></a>理解这个DP的方法就是</h3><pre class="line-numbers language-none"><code class="language-none">i是行
-j是列<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+j是列</code></pre>
 <p>所以 $f[i - 1][j]$ 是上到下遍历 $f[i][j - 1]$ 是左到右遍历</p>
 <pre class="line-numbers language-none"><code class="language-none">#include&lt;iostream&gt;
 using namespace std;
@@ -513,7 +513,7 @@ int main()
     cout &lt;&lt; f[row][col] &lt;&lt; endl;
     }
     return 0;
-}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+}</code></pre>
 <hr>
 <p>Python版</p>
 <pre class="line-numbers language-none"><code class="language-none">from typing import List
@@ -538,7 +538,7 @@ if __name__ == '__main__':
         res.append(tmp_res)
 
     for item in res:
-        print(item)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+        print(item)</code></pre>
 
 
 

@@ -509,7 +509,7 @@
             students.pop(0)
             t[sandwiches[0]] -= 1
             sandwiches.pop(0)
-        return len(students)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+        return len(students)</code></pre>
 
 <p>#2</p>
 <pre class="line-numbers language-none"><code class="language-none">def averageWaitingTime(self, customers: List[List[int]]) -&gt; float:
@@ -522,7 +522,7 @@
             else:
                 wait += cook + duration - arrival
             cook = max(cook, arrival) + duration
-        return wait / n<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+        return wait / n</code></pre>
 
 <p>#3<br>根据数学，让第一位变1，即需要00-&gt;10. 当前位为0时，能变1就变。<br>011111….<br>0111110.<br>–&gt; 0111101..<br>–&gt; 0111011..<br>…<br>0011111..<br>-&gt;应用第一条规则,1011111..<br>所以最优解只有一个0，而他的位置：<br>第一个<code>0</code>移动的位置即为后续0的个数<code>cnt</code> + <code>k</code>本身位置。</p>
 <pre class="line-numbers language-none"><code class="language-none">string maximumBinaryString(string s) {
@@ -538,7 +538,7 @@
         res[k + cnt] = '0';
         return res;
     }
-};<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+};</code></pre>
 
 <p>#4<br><img src="https://cdn.acwing.com/media/article/image/2020/12/27/39870_73b8311047-1111.PNG" alt="42#4.PNG"> </p>
 <pre class="line-numbers language-none"><code class="language-none">int minMoves(vector&lt;int&gt;&amp; nums, int k) {
@@ -562,11 +562,11 @@
         }
         return res;
 
-    }<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+    }</code></pre>
 
 <hr>
 <h2 id="219-周赛"><a href="#219-周赛" class="headerlink" title="219 周赛"></a>219 周赛</h2><p>#1<br>配对一次减少一只队伍，所以配<code>n - 1</code>次即可只剩一只队伍（他就是冠军，恭喜OG）</p>
-<pre class="line-numbers language-none"><code class="language-none">return n - 1<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-none"><code class="language-none">return n - 1</code></pre>
 
 <p>#2<br>最大值即可</p>
 <pre class="line-numbers language-none"><code class="language-none">#Python
@@ -578,14 +578,14 @@ int minPartitions(string n) {
             if (cur &lt; c - '0')
                 cur = c - '0'; //读当前位的数
         return cur;
-    }<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+    }</code></pre>
 <p>通遍历逻辑换一种y总写法</p>
 <pre class="line-numbers language-none"><code class="language-none">int res = 0;
 for (char c : n) res = max(res, c - '0');
-return res;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+return res;</code></pre>
 <p>笨一点排序</p>
 <pre class="line-numbers language-none"><code class="language-none">sort(n.begin(),n.end())
-return (n.back() - '0')<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+return (n.back() - '0')</code></pre>
 <p>#3 石子游戏<br>（区间DP +博弈论:$\color{blue}{最坏情况下的最好选择}$）<br>定义F[i][j]为[i,j] 先手 - 后手 的最大分值<br>①取i： S[i + 1, j] - f[i + 1, j] // f[i + 1, j] 即(B - A )max<br>②取j： S[i, j - 1] - f[i, j - 1]</p>
 <pre class="line-numbers language-none"><code class="language-none">int stoneGameVII(vector&lt;int&gt;&amp; stones) {
         const int n = stones.size();
@@ -599,7 +599,7 @@ return (n.back() - '0')<span aria-hidden="true" class="line-numbers-rows"><span>
             }
         }
         return f[1][n];
-    }<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+    }</code></pre>
 
 <p>#4<br>$\color{cyan}{找最长上升子序列}$<br>设状态 $f(i)$ 表示以第 $i$ 个长方体为结尾的最大堆叠高度。<br>转移时，对于每个 $i$，枚举 $0≤j&lt;i$。在满足要求后，$f(i)=max(f(i),f(j)+cuboids[i][2])$。</p>
 <p><img src="https://cdn.acwing.com/media/article/image/2020/12/27/39870_db9f9ff447-1691.PNG" alt="1691.PNG"> </p>
@@ -617,7 +617,7 @@ return (n.back() - '0')<span aria-hidden="true" class="line-numbers-rows"><span>
             ans = max(ans, f[i]);
         }
         return ans;
-    }<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+    }</code></pre>
 <hr>
 <p>219\ 220开始</p>
 <hr>
@@ -633,9 +633,9 @@ return (n.back() - '0')<span aria-hidden="true" class="line-numbers-rows"><span>
                 if s[i] in ['a', 'e', 'i', 'o', 'u']:
                     ret+=1
             return ret
-        return f(s1) == f(s2)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+        return f(s1) == f(s2)</code></pre>
 <p>or</p>
-<pre class="line-numbers language-none"><code class="language-none"><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-none"><code class="language-none"></code></pre>
 <p>2.模拟</p>
 <pre class="line-numbers language-none"><code class="language-none">def eatenApples(self, apples: List[int], days: List[int]) -&gt; int:
         res = 0
@@ -658,7 +658,7 @@ return (n.back() - '0')<span aria-hidden="true" class="line-numbers-rows"><span>
                     break
                 #return q
         return res
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</code></pre>
 <p>3.</p>
 <pre class="line-numbers language-none"><code class="language-none">def findBall(self, grid: List[List[int]]) -&gt; List[int]:
         n, m = len(grid), len(grid[0])
@@ -679,11 +679,11 @@ return (n.back() - '0')<span aria-hidden="true" class="line-numbers-rows"><span>
                     else:
                         x -= 1
             res.append(x)
-        return res<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+        return res</code></pre>
 
 
 <ol start="4">
-<li>暂缺<pre class="line-numbers language-none"><code class="language-none"><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<li>暂缺<pre class="line-numbers language-none"><code class="language-none"></code></pre>
 <h2 id="222"><a href="#222" class="headerlink" title="222"></a>222</h2></li>
 <li></li>
 </ol>
@@ -701,7 +701,7 @@ return (n.back() - '0')<span aria-hidden="true" class="line-numbers-rows"><span>
                 s[i] += 1
             else:
                 s[i] = 1
-        return ans % (10 ** 9 + 7)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+        return ans % (10 ** 9 + 7)</code></pre>
 <p>或c++ hashmap哈希表</p>
 <pre class="line-numbers language-none"><code class="language-none">int countPairs(vector&lt;int&gt;&amp; d) {
         int res = 0, mod = 1e9 + 7;
@@ -716,7 +716,7 @@ return (n.back() - '0')<span aria-hidden="true" class="line-numbers-rows"><span>
 
         }
         return res;
-    }<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+    }</code></pre>
 <ol start="3">
 <li>二分<pre class="line-numbers language-none"><code class="language-none">def waysToSplit(self, nums: List[int]) -&gt; int:
         pre = [0]
@@ -737,7 +737,7 @@ return (n.back() - '0')<span aria-hidden="true" class="line-numbers-rows"><span>
             if idx2 &gt;= idx1:
                 res += idx2 - idx1
 
-        return res % (10 ** 9 + 7)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+        return res % (10 ** 9 + 7)</code></pre>
 c++ 双指针 由j,k 随i动的单调性推出<pre class="line-numbers language-none"><code class="language-none">int waysToSplit(vector&lt;int&gt;&amp; nums) {
         int n = nums.size(), mod = 1e9 + 7;
         vector&lt;int&gt; s(n+1);
@@ -750,7 +750,7 @@ c++ 双指针 由j,k 随i动的单调性推出<pre class="line-numbers language-
                 res = (res + k - j + 1) % mod;
         }
         return res;
-    }<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+    }</code></pre>
 <img src="https://cdn.acwing.com/media/article/image/2021/01/03/39870_1c546ab24d-222%E7%AC%AC%E4%B8%89%E9%A2%98.PNG" alt="222#3"></li>
 <li><pre class="line-numbers language-none"><code class="language-none">def minOperations(self, target: List[int], arr: List[int]) -&gt; int:
         dic = {}
@@ -771,7 +771,7 @@ c++ 双指针 由j,k 随i动的单调性推出<pre class="line-numbers language-
             else:
                 res[idx] = num
 
-        return len(target) - len(res)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+        return len(target) - len(res)</code></pre></li>
 </ol>
 <p>ref:</p>
 <p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/u/lucifer1004/">lucifer1004</a></p>

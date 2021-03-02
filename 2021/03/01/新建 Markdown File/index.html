@@ -481,9 +481,9 @@
 </ul>
 </li>
 </ol>
-<pre class="line-numbers language-none"><code class="language-none">for (int i = 1; i &lt;= n; i++)
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">for (int i = 1; i &lt;= n; i++)
     for (int j = m; j &gt;= v; j--)
-        f[j] = max(f[j], f[j - v[i]] + w[i]);</code></pre>
+        f[j] = max(f[j], f[j - v[i]] + w[i]);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 
 
@@ -514,9 +514,9 @@
 <p>等价于:$f[i][j] = \max(f[i - 1][j], f[i][j - v_i] + w_i)$</p>
 <p>空间优化：$f[j] = \max(f[j], f[j - v_i] + w_i)$</p>
 <p>解释：如果用$\underline{<strong>滚动数组</strong>}$优化至一维，将体积从小到大循环，就可以保证计算 $f[j]$ 时用到 $f[j−v]$ 已经是第 $i$ 层状态，而 $f[j]$ 当层计算前仍然是上一层状态，满足(二维)转移方式。</p>
-<pre class="line-numbers language-none"><code class="language-none">for (int i = 1; i &lt;= n; i++)
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">for (int i = 1; i &lt;= n; i++)
     for (int j = v; j &lt;= m; j++)
-        f[j] = max(f[j], f[j - v[i]] + w[i]);</code></pre>
+        f[j] = max(f[j], f[j - v[i]] + w[i]);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 
 

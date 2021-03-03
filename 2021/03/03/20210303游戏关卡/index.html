@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="读电话号码 KickStart 2013 Round A 题A, 小窝窝 (伸懒腰)">
+    <meta name="keywords" content="游戏关卡, 小窝窝 (伸懒腰)">
     <meta name="description" content="描述是...">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -27,7 +27,7 @@
 </script>
 
 
-    <title>读电话号码 KickStart 2013 Round A 题A | 小窝窝 (伸懒腰)</title>
+    <title>游戏关卡 | 小窝窝 (伸懒腰)</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -301,12 +301,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">读电话号码 KickStart 2013 Round A 题A</h1>
+                    <h1 class="description center-align post-title">游戏关卡</h1>
                 </div>
             </div>
         </div>
@@ -422,23 +422,14 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Google/">
-                                <span class="chip bg-color">Google</span>
+                            <a href="/tags/%E6%80%BB%E5%BD%95/">
+                                <span class="chip bg-color">总录</span>
                             </a>
                         
                     </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/%E7%AE%97%E6%B3%95%E9%A2%98%E7%9B%AE/" class="post-category">
-                                算法题目
-                            </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -447,7 +438,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-02-27
+                    2021-03-03
                 </div>
                 
 
@@ -471,105 +462,94 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>698 读电话号码 KickStart 2013 Round A 题A</p>
-<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;iostream&gt;</span> <span class="token comment">//从io标准输入输出里读</span></span>
-<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;cstring&gt;</span></span>
-<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;sstream&gt;</span> <span class="token comment">//从字符串读</span></span>
-<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;vector&gt;</span></span>
-<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
-<span class="token comment">// getline() strstr 分隔符，- 读到它时终止。</span>
-string num<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
-    <span class="token string">"zero"</span><span class="token punctuation">,</span> <span class="token string">"one"</span><span class="token punctuation">,</span> <span class="token string">"two"</span><span class="token punctuation">,</span> <span class="token string">"three"</span><span class="token punctuation">,</span> <span class="token string">"four"</span><span class="token punctuation">,</span> <span class="token string">"five"</span><span class="token punctuation">,</span> <span class="token string">"six"</span><span class="token punctuation">,</span> <span class="token string">"seven"</span><span class="token punctuation">,</span> <span class="token string">"eight"</span><span class="token punctuation">,</span> <span class="token string">"nine"</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-string cnts<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token comment">//缩写的表示</span>
-    <span class="token string">""</span><span class="token punctuation">,</span> <span class="token string">""</span><span class="token punctuation">,</span> <span class="token string">"double"</span><span class="token punctuation">,</span> <span class="token string">"triple"</span><span class="token punctuation">,</span> <span class="token string">"quadruple"</span><span class="token punctuation">,</span> <span class="token string">"quintuple"</span><span class="token punctuation">,</span> <span class="token string">"sextuple"</span><span class="token punctuation">,</span> <span class="token string">"septuple"</span><span class="token punctuation">,</span> <span class="token string">"octuple"</span><span class="token punctuation">,</span>
-    <span class="token string">"nonuple"</span><span class="token punctuation">,</span> <span class="token string">"decuple"</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-<span class="token comment">//有点像PAT. 思路简单，但代码实现复杂，细节多，特判，输入输出不一样。</span>
-<span class="token keyword">void</span> <span class="token function">print</span><span class="token punctuation">(</span>string s<span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> s<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token comment">//遍历s 每一段。</span>
-    <span class="token punctuation">{</span>
-        <span class="token keyword">int</span> j <span class="token operator">=</span> i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span> <span class="token comment">//当前相同的数字是哪一段, 区间:【i, j】</span>
-        <span class="token keyword">while</span> <span class="token punctuation">(</span>j <span class="token operator">&lt;</span> s<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> s<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">==</span> s<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span> j<span class="token operator">++</span><span class="token punctuation">;</span> <span class="token comment">//区间【i,j】相同</span>
-        <span class="token keyword">int</span> len <span class="token operator">=</span> j <span class="token operator">-</span> i<span class="token punctuation">;</span> <span class="token comment">// 这一段的长度</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>len <span class="token operator">&gt;=</span> <span class="token number">2</span> <span class="token operator">&amp;&amp;</span> len <span class="token operator">&lt;=</span> <span class="token number">10</span><span class="token punctuation">)</span> cout <span class="token operator">&lt;&lt;</span> cnts<span class="token punctuation">[</span>len<span class="token punctuation">]</span> <span class="token operator">&lt;&lt;</span> <span class="token string">' '</span> <span class="token operator">&lt;&lt;</span> num<span class="token punctuation">[</span>s<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">-</span> <span class="token string">'0'</span><span class="token punctuation">]</span> <span class="token operator">&lt;&lt;</span> <span class="token string">' '</span><span class="token punctuation">;</span>
-        <span class="token comment">//缩写 + num[s[i]]</span>
-        <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>len <span class="token operator">&gt;</span> <span class="token number">10</span><span class="token punctuation">)</span>
-        <span class="token punctuation">{</span>
-            <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> k <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> k <span class="token operator">&lt;</span> len<span class="token punctuation">;</span> k<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token comment">//大于10个，分别输出len个数字</span>
-                cout <span class="token operator">&lt;&lt;</span> num<span class="token punctuation">[</span>s<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">-</span> <span class="token string">'0'</span><span class="token punctuation">]</span> <span class="token operator">&lt;&lt;</span> <span class="token string">' '</span><span class="token punctuation">;</span>
-            <span class="token comment">//注意 s[i]是个字符，所以减去偏移量'0'</span>
-        <span class="token punctuation">}</span>
-        <span class="token keyword">else</span> cout <span class="token operator">&lt;&lt;</span> num<span class="token punctuation">[</span>s<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">-</span> <span class="token string">'0'</span><span class="token punctuation">]</span> <span class="token operator">&lt;&lt;</span> <span class="token string">' '</span><span class="token punctuation">;</span><span class="token comment">//一个字符</span>
-        
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
+                <p>2021-03-02 23:28:29 ,  阅读 1</p>
+<p>(假装高情商): 我要设计一套<br>游. 戏. 关. 卡. ：【统计分析】版：①asdjoa; ②bsj;…<br>【深度学习】版：①…; ②…; ③..④⑤⑥⑦⑧⑨ABC..卷……(error: more iq needed to read file)<br>【风险控制】<br>【…(s)】<br>“最近沉迷于玩游戏, 一眼望不到游戏的尽头, 啊这就是乐园吗”</p>
+<p><strong>$\huge \color{cyan}{预计十五天}$。大概四百题(排除只选绿题的bias策略)就圆满了 然后就专心ks和其他</strong></p>
+<hr>
+<h3 id="留空-2021-02-14-12-37-52-阅读-51"><a href="#留空-2021-02-14-12-37-52-阅读-51" class="headerlink" title="留空 2021-02-14 12:37:52 ,  阅读 51"></a>留空 2021-02-14 12:37:52 ,  阅读 51</h3><p>【论如何提升机构教育质量】(等待更新)<br>T.B.C 2021.02<br>##还是手写赛高。仪式感max。考前备考ing 冲刺</p>
+<blockquote>
+<p>全勤玩家才考虑算法岗</p>
+</blockquote>
+<p>字节四百人统计数据：<br>后端31％<br>算法 27%<br>测试9%<br>前端8%<br>数据8％<br>客户端6％<br>其他职业11%<br>Table Name: Schedule 计划书</p>
+<table>
+<thead>
+<tr>
+<th>阶段</th>
+<th>\日期</th>
+<th>\详情</th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+</tr>
+<tr>
+<td>2021</td>
+<td>02.24</td>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+<td>..</td>
+</tr>
+<tr>
+<td>理论知识(5天24小时课时)</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+</tr>
+<tr>
+<td>实战能力(三大段五小阶段)</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+</tr>
+</tbody></table>
+<hr>
+<p>0<br>kali 靶场<br>htb<br>wanhub<br>src<br>0<br>剧情，沉浸感。<br>0<br><a target="_blank" rel="noopener" href="https://b23.tv/MpxLET">https://b23.tv/MpxLET</a><br>0<br>Python既然要向伪代码靠拢，那干脆直接困难理解的变量都用中文含义来命名<br>0<br>0<br>0</p>
+<pre class="line-numbers language-none"><code class="language-none">WEP不用破解 直接漏洞直连，
+WPA2 抓包1-2个ACKs就可以离线破解。
+（greyh上他提供的函数）aireplay -b .... -e ...
+aircrack （暴力枚举或字典）
+现实版：exploit-db 搜漏洞
+WPA3 还没完全普及
+etc. etc.<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>0。</p>
+<p>#论如何让自己接受读书# 记忆大师 Mastering knowledge<br>—》》》 <strong>Shenzhen Library 深图！！</strong> （天天人满）</p>
+<hr>
+<p>Others：<br>目录:<br>①Python 琐碎的操作知识<br>②KickStart冲冲冲Mar 21 2021, 12:00<br>③算法基础课重刷题<br>字要大，清晰！ 用心做ppt slide 和presentation</p>
+<table>
+<thead>
+<tr>
+<th>一</th>
+<th>a</th>
+<th>0 二</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Deep Learning (+白板推导-理论)</td>
+<td>v.s.</td>
+<td>Dive Deep （MXNET/Pytorch）+ Pytorch教程–实战!</td>
+</tr>
+</tbody></table>
+<pre class="line-numbers language-none"><code class="language-none">既然都要学计算机了，那就把思维图谱画一份出来吧
+提高点质量，让这个机构显得专业点(人性化) 1202年了美工也要有个bottom line performance
+预感第一版alpha阶段会不完善, (疏漏等)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
-<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-    <span class="token keyword">int</span> n<span class="token punctuation">;</span>
-    cin <span class="token operator">&gt;&gt;</span> n<span class="token punctuation">;</span>
-    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> C <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> C <span class="token operator">&lt;=</span> n<span class="token punctuation">;</span> C<span class="token operator">++</span><span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        string s<span class="token punctuation">,</span> seq<span class="token punctuation">;</span> <span class="token comment">//电话号码，分隔</span>
-        cin <span class="token operator">&gt;&gt;</span> s <span class="token operator">&gt;&gt;</span> seq<span class="token punctuation">;</span>
-        
-        vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;</span> len<span class="token punctuation">;</span> <span class="token comment">//读到长度(Defn)数组里</span>
-        string nums<span class="token punctuation">;</span>
-        stringstream <span class="token function">ssin</span><span class="token punctuation">(</span>seq<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//初始化到sstream</span>
-        <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token function">getline</span><span class="token punctuation">(</span>ssin<span class="token punctuation">,</span> nums<span class="token punctuation">,</span> <span class="token string">'-'</span><span class="token punctuation">)</span><span class="token punctuation">)</span> len<span class="token punctuation">.</span><span class="token function">push_back</span><span class="token punctuation">(</span><span class="token function">stoi</span><span class="token punctuation">(</span>nums<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//压入vector(len)中，并且stoi string to integer 字符串转化为数字</span>
-        <span class="token comment">//读到nums里，用 ‘-’终止</span>
-        
-        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"Case #%d  "</span><span class="token punctuation">,</span> C<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">int</span> start <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> <span class="token comment">//每一段的开始。第一段从0开始</span>
-        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> l <span class="token operator">:</span> len<span class="token punctuation">)</span> <span class="token comment">//每次找到当前段的长度</span>
-        <span class="token punctuation">{</span>
-            <span class="token function">print</span><span class="token punctuation">(</span>s<span class="token punctuation">.</span><span class="token function">substr</span><span class="token punctuation">(</span>start<span class="token punctuation">,</span> l<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//s当中的某一段，从start开始，到l。</span>
-            start <span class="token operator">+=</span> l<span class="token punctuation">;</span> <span class="token comment">//输出完事后 start偏移l</span>
-        <span class="token punctuation">}</span>
-        <span class="token function">puts</span><span class="token punctuation">(</span><span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-
-<p>同逻辑Python版：</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">缩写 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">''</span><span class="token punctuation">,</span> <span class="token string">''</span><span class="token punctuation">,</span> <span class="token string">'double'</span><span class="token punctuation">,</span> <span class="token string">'triple'</span><span class="token punctuation">,</span> <span class="token string">'quadruple'</span><span class="token punctuation">,</span> <span class="token string">'quintuple'</span><span class="token punctuation">,</span> 
-    <span class="token string">'sextuple'</span><span class="token punctuation">,</span> <span class="token string">'septuple'</span><span class="token punctuation">,</span> <span class="token string">'octuple'</span><span class="token punctuation">,</span>
-    <span class="token string">'nonuple'</span><span class="token punctuation">,</span> <span class="token string">'decuple'</span><span class="token punctuation">]</span>
-数字 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'zero'</span><span class="token punctuation">,</span> <span class="token string">'one'</span><span class="token punctuation">,</span> <span class="token string">'two'</span><span class="token punctuation">,</span> <span class="token string">'three'</span><span class="token punctuation">,</span> <span class="token string">'four'</span><span class="token punctuation">,</span> <span class="token string">'five'</span><span class="token punctuation">,</span> <span class="token string">'six'</span><span class="token punctuation">,</span> <span class="token string">'seven'</span><span class="token punctuation">,</span>
-        <span class="token string">'eight'</span><span class="token punctuation">,</span> <span class="token string">'nine'</span><span class="token punctuation">]</span>
-<span class="token keyword">def</span> <span class="token function">read</span><span class="token punctuation">(</span>l<span class="token punctuation">,</span> r<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token keyword">while</span> l <span class="token operator">&lt;</span> r<span class="token punctuation">:</span>
-        k <span class="token operator">=</span> l <span class="token operator">+</span> <span class="token number">1</span>
-        <span class="token keyword">while</span> k <span class="token operator">&lt;</span> r <span class="token keyword">and</span> a<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">==</span> a<span class="token punctuation">[</span>l<span class="token punctuation">]</span><span class="token punctuation">:</span>
-            k <span class="token operator">+=</span> <span class="token number">1</span>
-        <span class="token comment">#这样区间[l, k]就是数字相同的一段</span>
-        长度 <span class="token operator">=</span> k <span class="token operator">-</span> l
-        <span class="token keyword">if</span> <span class="token number">2</span> <span class="token operator">&lt;=</span> 长度 <span class="token operator">&lt;=</span> <span class="token number">10</span><span class="token punctuation">:</span>
-            res<span class="token punctuation">.</span>extend<span class="token punctuation">(</span><span class="token punctuation">[</span>缩写<span class="token punctuation">[</span>长度<span class="token punctuation">]</span><span class="token punctuation">,</span> 数字<span class="token punctuation">[</span>a<span class="token punctuation">[</span>l<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
-        <span class="token keyword">elif</span> 长度 <span class="token operator">&gt;</span> <span class="token number">10</span><span class="token punctuation">:</span>
-            res<span class="token punctuation">.</span>extend<span class="token punctuation">(</span><span class="token punctuation">[</span>数字<span class="token punctuation">[</span>a<span class="token punctuation">[</span>l<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token operator">*</span> 长度<span class="token punctuation">)</span> <span class="token comment">#每个字分别输出出来</span>
-        <span class="token keyword">else</span><span class="token punctuation">:</span>
-            res<span class="token punctuation">.</span>append<span class="token punctuation">(</span>数字<span class="token punctuation">[</span>a<span class="token punctuation">[</span>l<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token comment">#省一个就输出出来</span>
-        l <span class="token operator">=</span> k
-
-<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">"__main__"</span><span class="token punctuation">:</span>
-    T <span class="token operator">=</span> <span class="token builtin">int</span><span class="token punctuation">(</span><span class="token builtin">input</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-    t <span class="token operator">=</span> <span class="token number">0</span>
-    <span class="token keyword">while</span> t <span class="token operator">&lt;</span> T<span class="token punctuation">:</span>
-        t <span class="token operator">+=</span> <span class="token number">1</span>
-        a<span class="token punctuation">,</span> b <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token punctuation">)</span>
-        a <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span><span class="token builtin">map</span><span class="token punctuation">(</span><span class="token builtin">int</span><span class="token punctuation">,</span> a<span class="token punctuation">)</span><span class="token punctuation">)</span>
-        b <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span><span class="token builtin">map</span><span class="token punctuation">(</span><span class="token builtin">int</span><span class="token punctuation">,</span> b<span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token string">'-'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">#用-来分隔</span>
-        l<span class="token punctuation">,</span> res <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
-        <span class="token keyword">for</span> x <span class="token keyword">in</span> b<span class="token punctuation">:</span>
-            read<span class="token punctuation">(</span>l<span class="token punctuation">,</span> l <span class="token operator">+</span> x<span class="token punctuation">)</span>
-            l <span class="token operator">+=</span> x <span class="token comment">#起始端加上偏移量</span>
-        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'Case #%d:  %s'</span> <span class="token operator">%</span> <span class="token punctuation">(</span>t<span class="token punctuation">,</span> <span class="token string">' '</span><span class="token punctuation">.</span>join<span class="token punctuation">(</span>res<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
+<p>2021（2020）<br>CV卷化顶峰① (yolo之父都不做cv了!?)<br>nlp产出!</p>
+<hr>
+<p>将文字Visualised<br>Short Clipedlised 两三分钟</p>
+<p>Words shock me. Reading materials mean so much to one!! 阅读</p>
 
                 
             </div>
@@ -596,7 +576,7 @@ string cnts<span class="token punctuation">[</span><span class="token punctuatio
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://cyawu.github.io/2021/02/27/%E8%AF%BB%E7%94%B5%E8%AF%9D%E5%8F%B7%E7%A0%81%20KickStart%202013/">http://cyawu.github.io/2021/02/27/%E8%AF%BB%E7%94%B5%E8%AF%9D%E5%8F%B7%E7%A0%81%20KickStart%202013/</a>
+                    <a href="http://cyawu.github.io/2021/03/03/20210303%E6%B8%B8%E6%88%8F%E5%85%B3%E5%8D%A1/">http://cyawu.github.io/2021/03/03/20210303%E6%B8%B8%E6%88%8F%E5%85%B3%E5%8D%A1/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -634,8 +614,8 @@ string cnts<span class="token punctuation">[</span><span class="token punctuatio
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Google/">
-                                    <span class="chip bg-color">Google</span>
+                                <a href="/tags/%E6%80%BB%E5%BD%95/">
+                                    <span class="chip bg-color">总录</span>
                                 </a>
                             
                         </div>
@@ -675,6 +655,280 @@ string cnts<span class="token punctuation">[</span><span class="token punctuatio
     
 
     
+        <style>
+    .twikoo-card {
+        margin: 1.5rem auto;
+    }
+
+    .twikoo-card .card-content {
+        padding: 20px;
+    }
+
+    #tcomments textarea {
+        box-sizing: border-box;
+        background: url("/") 100% 100% no-repeat;
+    }
+
+    #tcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #tcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #tcomments a {
+        padding: 0 2px;
+        color: #4cbf30;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    #tcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #tcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #tcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #tcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #tcomments ul li {
+        list-style-type: disc;
+    }
+
+    #tcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #tcomments table,
+    th,
+    td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #tcomments table,
+    th,
+    td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n),
+    thead {
+        background-color: #fafafa;
+    }
+
+    #tcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #tcomments table td {
+        min-width: 80px;
+    }
+
+    #tcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #tcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #tcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #tcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #tcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #tcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #tcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #tcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #tcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #tcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #tcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #tcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #tcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #tcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #tcomments [type="checkbox"]:not(:checked),
+    [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #tcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #tcomments dfn {
+        font-style: italic;
+    }
+
+    #tcomments small {
+        font-size: 85%;
+    }
+
+    #tcomments cite {
+        font-style: normal;
+    }
+
+    #tcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #tcomments table,
+    th,
+    td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n),
+    thead {
+        background-color: #fafafa;
+    }
+
+    #tcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #tcomments table td {
+        min-width: 80px;
+    }
+
+    #tcomments [type="checkbox"]:not(:checked),
+    [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+</style>
+
+<div class="card twikoo-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div class="card-content" style="display: grid">
+        <div id="tcomments"></div>
+    </div>
+</div>
+
+<script src="/libs/twikoo/twikoo.all.min.js"></script>
+<script>
+    twikoo.init({
+        envId: 'acw-cwu-9g3z3hoqc8232875',
+        el: '#tcomments',
+        region: '',
+        path: ''
+    }).then(function () {
+        var tkInputs = document.querySelector('#twikoo').getElementsByTagName('input');
+        for (var tkInputsIndex = 0; tkInputsIndex < tkInputs.length; tkInputsIndex++) {
+            if (tkInputs[tkInputsIndex]) {
+                tkInputs[tkInputsIndex].classList.add('browser-default');
+            }
+        }
+    });
+</script>
+
+    
 
     
 
@@ -685,13 +939,13 @@ string cnts<span class="token punctuation">[</span><span class="token punctuatio
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/02/27/20210301EPython/">
+                <a href="/2021/03/04/20210304/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="Effective Python 2">
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="下定决心Work Hard_Play music+alcohol hard">
                         
-                        <span class="card-title">Effective Python 2</span>
+                        <span class="card-title">下定决心Work Hard_Play music+alcohol hard</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -702,27 +956,15 @@ string cnts<span class="token punctuation">[</span><span class="token punctuatio
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-02-27
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-03-04
                         </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/" class="post-category">
-                                    编程语言
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            CY
                             
                         </span>
                     </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Python/">
-                        <span class="chip bg-color">Python</span>
-                    </a>
-                    
                 </div>
                 
             </div>
@@ -734,13 +976,13 @@ string cnts<span class="token punctuation">[</span><span class="token punctuatio
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/02/26/%E7%AE%97%E6%B3%95%E6%8F%90%E9%AB%98%E7%8F%AD(%E6%8A%80%E5%B7%A7)/">
+                <a href="/2021/03/03/Temp/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="算法提高课DP">
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="Temp">
                         
-                        <span class="card-title">算法提高课DP</span>
+                        <span class="card-title">Temp</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -751,7 +993,7 @@ string cnts<span class="token punctuation">[</span><span class="token punctuatio
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-26
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-03
                             </span>
                         <span class="publish-author">
                             
@@ -760,14 +1002,6 @@ string cnts<span class="token punctuation">[</span><span class="token punctuatio
                             
                         </span>
                     </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E7%AE%97%E6%B3%95/">
-                        <span class="chip bg-color">算法</span>
-                    </a>
-                    
                 </div>
                 
             </div>
@@ -896,6 +1130,13 @@ string cnts<span class="token punctuation">[</span><span class="token punctuatio
 
 </main>
 
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
+    });
+</script>
 
 
 

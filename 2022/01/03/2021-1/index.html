@@ -473,43 +473,82 @@
             <div id="articleContent">
                 <p>Git 学习：</p>
 <ol>
-<li>```<br>git branch <name> 创建新name分支git checkout <name> 切换到name的分支上。<br>早分支早理清条理。<h1 id="未来：-git-switch-会取代checkout，因为checkout功能太多。"><a href="#未来：-git-switch-会取代checkout，因为checkout功能太多。" class="headerlink" title="未来： git switch 会取代checkout，因为checkout功能太多。"></a>未来： git switch 会取代checkout，因为checkout功能太多。</h1>git checkout -b <your-branch-name> 创建新分支并同时切换过去。【one line】<pre class="line-numbers language-none"><code class="language-none">
-
-
-练习3：
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-git branch bugFix<br>git checkout bugFix<br>git commit<br>git checkout main<br>git commit<br>git merge bugFix #把bugFix合并到main分支里<pre class="line-numbers language-none"><code class="language-none">
-
-
-指针，分支改指向
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-git checkout HEAD<del>4 # 让HEAD指针向上走到第4个父节点<br>git branch -f main HEAD</del>3 # 我使用相对引用最多的就是移动分支。可以直接使用 -f 选项让分支指向另一个提交 # 将 main 分支强制指向 HEAD 的第 3 级父提交。</your-branch-name></name></name></li>
+<li></li>
 </ol>
-<pre class="line-numbers language-none"><code class="language-none">
+<pre class="line-numbers language-none"><code class="language-none">git branch &lt;name&gt; 创建新name分支
 
+git checkout &lt;name&gt; 切换到name的分支上。早分支早理清条理。
 
-撤销变更
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<p>在 Git 里撤销变更的方法很多。和提交一样，撤销变更由底层部分（暂存区的独立文件或者片段）和上层部分（变更到底是通过哪种方式被撤销的）组成。我们这个应用主要关注的是后者。<br>git reset<br>git revert<br>要完成此关，分别撤销 local 分支和 pushed 分支上的最近一次提交。共需要撤销两个提交（每个分支一个）。</p>
-<p>记住 pushed 是远程分支，local 是本地分支 —— 这么说你应该知道用分别哪种方法了吧？<br>git reset local~2<br>git checkout pushed<br>git revert pushed</p>
-<pre class="line-numbers language-none"><code class="language-none">
+# 未来： git switch 会取代checkout，因为checkout功能太多。
 
-
+git checkout -b &lt;your-branch-name&gt; 创建新分支并同时切换过去。【one line】<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 
+<p>练习3：</p>
+<pre class="line-numbers language-none"><code class="language-none">git branch bugFix
+git checkout bugFix
+git commit
+git checkout main
+git commit
+git merge bugFix #把bugFix合并到main分支里<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 
-参考资料：
+<p>指针，分支改指向</p>
+<pre class="line-numbers language-none"><code class="language-none">git checkout HEAD~4 # 让HEAD指针向上走到第4个父节点
+git branch -f main HEAD~3 # 我使用相对引用最多的就是移动分支。可以直接使用 -f 选项让分支指向另一个提交 # 将 main 分支强制指向 HEAD 的第 3 级父提交。
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-y总Linux 第五课Git
 
-[Learn Git Branching](https://learngitbranching.js.org/?locale=zh_CN)
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p><a target="_blank" rel="noopener" href="https://learngitbranching.js.org/?locale=zh_CN">https://learngitbranching.js.org/?locale=zh_CN</a></p>
-<pre><code>
-</code></pre>
+
+<p>撤销变更</p>
+<pre class="line-numbers language-none"><code class="language-none">在 Git 里撤销变更的方法很多。和提交一样，撤销变更由底层部分（暂存区的独立文件或者片段）和上层部分（变更到底是通过哪种方式被撤销的）组成。我们这个应用主要关注的是后者。
+git reset
+git revert
+要完成此关，分别撤销 local 分支和 pushed 分支上的最近一次提交。共需要撤销两个提交（每个分支一个）。
+
+记住 pushed 是远程分支，local 是本地分支 —— 这么说你应该知道用分别哪种方法了吧？
+git reset local~2
+git checkout pushed
+git revert pushed<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<pre class="line-numbers language-none"><code class="language-none">到现在我们已经学习了 Git 的基础知识 —— 提交、分支以及在提交树上移动。 这些概念涵盖了 Git 90% 的功能，同样也足够满足开发者的日常需求
+
+然而, 剩余的 10% 在处理复杂的工作流时(或者当你陷入困惑时）可能就显得尤为重要了。接下来要讨论的这个话题是“整理提交记录” —— 开发人员有时会说“我想要把这个提交放到这里, 那个提交放到刚才那个提交的后面”, 而接下来就讲的就是它的实现方式，非常清晰、灵活，还很生动。
+本系列的第一个命令是 git cherry-pick, 命令形式为:
+
+git cherry-pick &lt;提交号&gt;...
+如果你想将一些提交复制到当前所在的位置（HEAD）下面的话， Cherry-pick 是最直接的方式了。我个人非常喜欢 cherry-pick，因为它特别简单。
+
+git cherry-pick C2 C4 #把C2` C4`加到main上<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<pre class="line-numbers language-none"><code class="language-none">交互式的 rebase
+当你知道你所需要的提交记录（并且还知道这些提交记录的哈希值）时, 用 cherry-pick 再好不过了 —— 没有比这更简单的方式了。
+
+但是如果你不清楚你想要的提交记录的哈希值呢? 幸好 Git 帮你想到了这一点, 我们可以利用交互式的 rebase —— 如果你想从一系列的提交记录中找到想要的记录, 这就是最好的方法了
+交互式 rebase 指的是使用带参数 --interactive 的 rebase 命令, 简写为 -i
+
+如果你在命令后增加了这个选项, Git 会打开一个 UI 界面并列出将要被复制到目标分支的备选提交记录，它还会显示每个提交记录的哈希值和提交说明，提交说明有助于你理解这个提交进行了哪些更改。
+
+在实际使用时，所谓的 UI 窗口一般会在文本编辑器 —— 如 Vim —— 中打开一个文件。 考虑到课程的初衷，我弄了一个对话框来模拟这些操作。
+
+当 rebase UI界面打开时, 你能做3件事:
+
+调整提交记录的顺序（通过鼠标拖放来完成）
+删除你不想要的提交（通过切换 pick 的状态来完成，关闭就意味着你不想要这个提交记录）
+合并提交。它允许你把多个提交记录合并成一个。
+git rebase -i HEAD~4<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>参考资料：</p>
+<p>y总Linux 第五课Git</p>
+<p><a target="_blank" rel="noopener" href="https://learngitbranching.js.org/?locale=zh_CN">Learn Git Branching</a></p>
+<pre class="line-numbers language-none"><code class="language-none">https://learngitbranching.js.org/?locale=zh_CN<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 
                 
             </div>
